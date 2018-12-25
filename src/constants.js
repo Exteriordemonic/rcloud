@@ -1,8 +1,10 @@
 export const COLOR = {
   WHITE: '#ffffff',
-  BLACK: '#000000',
-  REBECCA_PURPLE: '#663399',
-  BLUE: '#1a58cc',
+  BLACK: '#484848',
+  BLUE: '#77A6F7',
+  GREEN: '#00887A',
+  CREAM: '#FFCCBC',
+  LIGHT_BLUE: '#D3E3FC',
 };
 
 export const NAV_ITEMS = [
