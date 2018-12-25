@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { Container } from '../Container';
 import { ResetStyle } from '../Reset';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,7 +28,9 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        <Header />
         <Container>{children}</Container>
+        <Footer />
       </>
     )}
   />
