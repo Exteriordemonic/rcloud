@@ -41,15 +41,20 @@ const normalize = `
   [hidden]{display:none}
 `;
 
+const FontFamily = `
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+`;
+
 const headerStyle = `
   margin: 0;
   margin-bottom: 1rem;
   font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const ResetStyle = createGlobalStyle`
   ${normalize}
-
+  ${FontFamily}
   * {
     margin: 0;
     padding: 0;
@@ -57,7 +62,7 @@ export const ResetStyle = createGlobalStyle`
   }
 
   html {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: ${COLOR.BLACK};
@@ -68,29 +73,32 @@ export const ResetStyle = createGlobalStyle`
   }
 
   .title {
+    display: block;
     ${headerStyle}
 
     &--h1 {
-      font-size: 5vw;
+      font-size: 2.5vw;
+      text-transform: uppercase;
     }
 
     &--h2 {
-      font-size: 4vw;
+      font-size: 2vw;
+      text-transform: initial;
     }
 
     &--h3 {
       ${headerStyle}
-      font-size: 3vw;
+      font-size: 1.7vw;
     }
 
     &--h4 {
       ${headerStyle}
-      font-size: 2vw;
+      font-size: 1.5vw;
     }
 
     &--h5 {
       ${headerStyle}
-      font-size: 1.5vw;
+      font-size: 1.3vw;
     }
   }
 
