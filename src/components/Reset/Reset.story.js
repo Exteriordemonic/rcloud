@@ -8,14 +8,7 @@ import { defaultParameters } from '../../../.storybook/constants';
 
 // Pulled from https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 const sample = `
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
 
----
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
@@ -168,4 +161,13 @@ const story = storiesOf('Components|Reset', module)
   .addDecorator(withInfo)
   .addParameters(defaultParameters);
 
-story.add('Test Elements', () => <Markdown source={sample} />);
+story.add('Test Elements', () => (
+  <>
+    <h1 className="title title--h1">Headeing 1</h1>
+    <h2 className="title title--h2">Headeing 2</h2>
+    <h3 className="title title--h3">Headeing 3</h3>
+    <h4 className="title title--h4">Headeing 4</h4>
+    <h5 className="title title--h5">Headeing 5</h5>
+    <Markdown source={sample} />
+  </>
+));

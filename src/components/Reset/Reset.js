@@ -67,34 +67,31 @@ export const ResetStyle = createGlobalStyle`
     background: ${COLOR.WHITE};
   }
 
-  h1 {
+  .title {
     ${headerStyle}
-    font-size: 2.441rem;
-  }
 
-  h2 {
-    ${headerStyle}
-    font-size: 1.953rem;
-  }
+    &--h1 {
+      font-size: 5vw;
+    }
 
-  h3 {
-    ${headerStyle}
-    font-size: 1.563rem;
-  }
+    &--h2 {
+      font-size: 4vw;
+    }
 
-  h4 {
-    ${headerStyle}
-    font-size: 1.25rem;
-  }
+    &--h3 {
+      ${headerStyle}
+      font-size: 3vw;
+    }
 
-  h5 {
-    ${headerStyle}
-    font-size: 1rem;
-  }
+    &--h4 {
+      ${headerStyle}
+      font-size: 2vw;
+    }
 
-  h6 {
-    ${headerStyle}
-    font-size: 0.8rem;
+    &--h5 {
+      ${headerStyle}
+      font-size: 1.5vw;
+    }
   }
 
   p {
