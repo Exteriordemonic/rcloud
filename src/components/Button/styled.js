@@ -10,3 +10,50 @@ export const ButtonWrapper = styled.button`
   background: ${COLOR.BLUE};
   color: ${COLOR.WHITE};
 `;
+
+export const ButtonLinkWrapper = styled.button`
+  position: relative;
+  padding: 0.4rem 0.2rem;
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  font-weight: bold;
+  color: ${COLOR.BLACK};
+  opacity: ${props => (props.active ? 1 : 0.6)};
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: ${props => (props.active ? '100%' : '0%')};
+    height: 10%;
+    background-color: ${COLOR.BLACK};
+    transition: 0.4s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: ${props => (props.disabled ? '0.6' : '1')};
+    ${this}:before {
+      width: 100%;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 0.2;
+    }
+  }
+`;
