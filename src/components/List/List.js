@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ListWrapper, ListElem } from './styled';
+import { ButtonLink } from '../Button';
 
 const List = ({ elements }) => (
   <ListWrapper>
     {elements.map(({ id, title }) => (
-      <ListElem key={id}>{title}</ListElem>
+      <ListElem key={id}>
+        <ButtonLink>{title}</ButtonLink>
+      </ListElem>
     ))}
   </ListWrapper>
 );

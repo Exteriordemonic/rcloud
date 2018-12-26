@@ -18,6 +18,8 @@ export const ButtonLinkWrapper = styled.button`
   background-color: transparent;
   outline: 0;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1vw;
   color: ${COLOR.BLACK};
   opacity: ${props => (props.active ? 1 : 0.6)};
   transition: 0.4s ease-in-out;
@@ -27,11 +29,11 @@ export const ButtonLinkWrapper = styled.button`
     content: '';
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 5%;
     left: 0;
     margin: auto;
     width: ${props => (props.active ? '100%' : '0%')};
-    height: 10%;
+    height: 8%;
     background-color: ${COLOR.BLACK};
     transition: 0.4s ease-in-out;
   }
